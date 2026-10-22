@@ -1,6 +1,6 @@
-# php2shell-toolkit
+# php2shell
 
-Toolkit for **CVE-2026-109618** / **CVE-2026-109619** ("php2shell") — PHP pre-auth RCE
+Proof-of-concept for **CVE-2026-109618** / **CVE-2026-109619** ("php2shell") — PHP pre-auth RCE
 via `session.upload_progress` and the Zend engine OOM bailout.
 
 > **CVSS v4.0 9.2 — Critical**
@@ -104,7 +104,7 @@ you must also disable `session.upload_progress` or remove the LFI sink.
 | D | OOM → stale `EG()` | Yes | none (mod_php) | mod_php |
 | E | FPM session OOM → stale `BG()` | Yes | any `session_start()` | FPM |
 
-This toolkit implements **A** (full RCE) and detection for **D/E** preconditions.
+This repo implements **A** (full RCE) and detection for **D/E** preconditions.
 
 ---
 

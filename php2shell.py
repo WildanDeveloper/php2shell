@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-php2shell toolkit - CVE-2026-109618 / CVE-2026-109619
+php2shell - CVE-2026-109618 / CVE-2026-109619
 PHP pre-auth RCE via session.upload_progress + Zend engine OOM bailout.
 
 CVSS v4.0 9.2 CRITICAL
@@ -56,7 +56,7 @@ import sys
 import time
 import urllib.parse
 
-BANNER = "php2shell toolkit  CVE-2026-109618 / CVE-2026-109619  (chain A RCE + detection)"
+BANNER = "php2shell  CVE-2026-109618 / CVE-2026-109619  (chain A RCE + detection)"
 
 FIXED = [(8, 2, 35), (8, 3, 36), (8, 4, 27), (8, 5, 12)]
 OOM_MARKERS = ("allowed memory size", "exhausted", "input variables exceeded",
